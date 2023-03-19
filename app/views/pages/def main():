@@ -1,0 +1,62 @@
+def main():
+    option= 0
+    while option != "-1":
+        print("Which shape would you like to calculate the area for? Please enter the option number")
+        print("1. Square")
+        print("2. Rectangle")
+        print("3. Triangle")
+        print(" 4. Circle")
+        print ("-1 . Exit")
+        option= input( "Enter Option")
+
+        if option == "1":
+            print("*****SQUARE*****")
+            x= input("what is the one Lateral side of the square (m) ?")
+            print(" The area of the squre is " + square(x)+ " m2")
+
+        elif option == "2":
+            print("*****RECTANGLE*****")
+            l= input("what is the lenght if the rectangle  (m)")
+            h= input("what is the height if the rectangle  (m)")
+            print(" The area of the rectangle is " + rectangle(l,h)+ " m2")
+
+        elif option == "3":
+            print("*****TRIANGLE*****")
+            b= input("what is the base if the triangle  (m)")
+            h= input("what is the height if the triangle  (m)")
+            print(" The area of the rectangle is " + triangle(b,h)+ " m2")
+
+        elif option == "4":
+            print("*****CIRCLE*****")
+            r= input("what is the radius of the circle in meters?")
+            print(" The area of the circle is " + circle(r)+ " m2")
+
+        elif option == "-1":
+            print("Good bye!!")
+
+        else:
+            print("Invalid input, please enter a number: _")
+
+def square(x):
+    x= int(x)
+    area= x**x
+    return str(area)
+
+def rectangle(l,h):
+    l= int(l)
+    h= int(h)
+    area= l*h
+    return str(area)
+
+def triangle(b,h):
+    b= int(b)
+    h= int(h)
+    area = b* h / 2
+    return str(area)
+
+def circle (r):
+    r= int(r)
+    area= 3.1416* r**2/ 2
+    return str(area)
+
+main()
